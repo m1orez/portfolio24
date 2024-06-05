@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+}
+nav {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+header img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+#headerTxt {
+    position: absolute;
+    top: 48%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+#headerTxt h1 {
+    font-size: 600%;    
+    color: white;
+    font-weight: 700;
+    line-height: 95px;
+    font-family: "Marcellus";
+    padding-bottom: 5%;
+}
+#headerTxt h1 b {
+    font-weight: 500;
+}
+.typing-container {
+    font-size: 2em;
+    color: white;
+}
+.typing-container span {
+    font-family: "Calistoga";
+    font-weight: 100;
+    font-size: 140%;
+}
+.typing-effect {
+    padding: 5px 10px;
+    color: #ff85fd;
+    padding-right: 3px;
+    background-color: #ffffff;
+    border-right: 0.1em solid #ff85fd;
+    white-space: nowrap;
+    overflow: hidden;
+}
+section {
+    margin-top: 100vh;
+}
