@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const adjectives = [
-    "web developer", 
-    "student", 
-    "web designer", 
-    "programmer"];
+    "web developer ", 
+    "designer ", 
+    "programmer ",
+    "student ", 
+    "20 year old "
+];
     const typingEffectElement = document.querySelector('.typing-effect');
     let charIndex = 0;
     let adjectiveIndex = 0;
@@ -40,4 +42,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     type();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.aboutmeLinks .link');
+    const header = document.getElementById('aboutMeHeader');
+    const paragraph = document.getElementById('AboutMeParagraph');
+    
+    function updateContent(activeLink) {
+        if (activeLink.textContent === 'About me') {
+            header.textContent = 'About me';
+            paragraph.textContent = "Hey there, I'm Mio! I'm a 20-year-old Software Engineering student with a passion for front-end development. I'm currently working on my degree and have been sharpening my skills in building intuitive and engaging user interfaces. I enjoy turning tricky problems into clean, beautiful, and user-friendly designs.";
+        } else if (activeLink.textContent === 'Experience') {
+            header.textContent = 'Experience';
+            paragraph.textContent = "I go to school.";
+        }
+    }
+    
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            updateContent(link);
+        });
+    });
+    
+    updateContent(document.querySelector('.aboutmeLinks .link.active'));
 });
