@@ -1,27 +1,47 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 body {
     overflow-x: hidden;
 }
 nav {
-    padding: 20px 0;
+    padding: 15px 0;
     position: sticky;
     position: -webkit-sticky;
-    top: 0;
-    backdrop-filter: blur(10px);
+    top: 2%;
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 100;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-nav a {
-    margin-left: 87%;
+.navItems {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.navItems a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+#contactNav {
+    margin-left: 72%;
     background-color: #FF1CC0;
+    padding: 10px 20px;
+    border-radius: 50px;
     text-decoration: none;
     color: white;
-    padding: 7px 20px;
-    font-size: 150%;
-    border-radius: 10px;
-    font-family: "Outfit";
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 nav a:hover {
     animation: ContactMe 0.5s forwards;
@@ -80,9 +100,10 @@ header img {
     width: 100vw;
     height: 10vh;
     background-color: #9c71f4;
-    rotate: -2.8deg;
+    rotate: -2.7deg;
     position: absolute;
     top: 100%;
+    margin-left: -10px;
 }
 .header-section-divider h2 {
     text-align: center;
@@ -95,10 +116,10 @@ header img {
     margin-top: 105vh;
     display: flex;
     padding: 7% 15%;
+    height: 50vh;
 }
 .aboutMeInfo {
     border-right: 2px solid black;
-    padding: 5% 0;
     width: 80%;
 }
 .aboutMeInfo h1 {
